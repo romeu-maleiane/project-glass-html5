@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <header>
+        <meta charset="URT-8">
+        <title>Testes javascript</title>
+        <script>
+            var quebrada = false;
+            function mudalampada(tipo) {
+                /*if (tipo == 1) {
+                    document.querySelector('img#la').src = "_imagens/lampada-acesa.jpg";
+                } else if (tipo == 2) {
+                    document.querySelector('img#la').src = "_imagens/lampada-apagada.jpg";
+                } else if (tipo == 3) {
+                    document.querySelector('img#la').src = "_imagens/lampada-quebrada.jpg";
+                    
+                } else {
+                    document.querySelector('img#la').src = "_imagens/lampada-apagada.jpg";
+                }*/
+               
+               /*if (tipo == 1){
+                var arquivo = '_imagens/lampada-acesa.jpg';
+               }
+               if (tipo == 2){
+                arquivo = '_imagens/lampada-apagada.jpg';
+               }
+               if (tipo == 3) {
+                    arquivo = '_imagens/lampada-quebrada.jpg';
+                }
+
+               if (!quebrada){
+                    document.querySelector('img#la').src = arquivo;
+                    if (tipo == 3) {
+                        quebrada = true
+                    }
+                }*/
+                if (!quebrada){
+                    document.querySelector('img#la').src= `_imagens/${tipo}.jpg`
+                    if (tipo == 'lampada-quebrada'){
+                        quebrada = true
+                    }
+                }    
+            }
+        </script>
+    </header>
+    <body>
+        <h1>Acender a lampada</h1>
+        <div id="res"></div>
+        <img id="la" src="_imagens/lampada-apagada.jpg" alt="lampada-apagada" onmouseenter="mudalampada('lampada-acesa')" onmouseout="mudalampada('lampada-apagada')" onclick="mudalampada('lampada-quebrada')">
+        
+    </body>
+</html>
